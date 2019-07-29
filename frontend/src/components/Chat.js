@@ -9,7 +9,7 @@ import {
 import io from "socket.io-client";
 import ChatTable from "./ChatTable.js";
 
-// convertDate(new Date())
+// call with convertDate(new Date())
 const convertDate = dateTarget => {
   const months = [
     "January",
@@ -43,11 +43,13 @@ class ChatRoomComponent extends React.Component {
       newMessage: {
         name: newName,
         email: newEmail,
-        content: newContent
+        content: newContent,
+        stamp: newStamp
       },
       newName: null,
       newEmail: null,
-      newContent: null
+      newContent: null,
+      newStamp: null
     };
 
     this.socket = io("http://localhost:3000");
@@ -116,7 +118,8 @@ class ChatRoomComponent extends React.Component {
 
   setNewMessage(event) {
     this.setState({
-      newContent: event.target.value
+      newContent: event.target.value,
+      newStamp: convertDate(new Date())
     });
   }
 

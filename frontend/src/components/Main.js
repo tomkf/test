@@ -1,9 +1,9 @@
 import React from "react";
-import Chat from "components/Chat.js";
+import ChatRoom from "components/Chat.js";
 
 class AppComponent extends React.Component {
   render() {
-    return <Chat />;
+    return <ChatRoom />;
   }
 }
 
