@@ -34,7 +34,7 @@ const convertDate = dateTarget => {
   return formatted_date;
 };
 
-class ChatRoomComponent extends React.Component {
+class ChatComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -73,6 +73,8 @@ class ChatRoomComponent extends React.Component {
   render() {
     return (
       <div>
+        <h1>TESTING</h1>
+
         <Form inline onSubmit={this.handleSubmit}>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Your name</Form.Label>
@@ -149,4 +151,4 @@ class ChatRoomComponent extends React.Component {
   }
 }
 
-export default ChatRoomComponent;
+export default ChatComponent;
